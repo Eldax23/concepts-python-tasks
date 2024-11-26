@@ -1,10 +1,10 @@
 
-
 import random
 
-words = ["phone" , "car" , "laptop" , "notepad" , "apple"]
+words = ["apple" , "car" , "game" , "technology" , "laptop"]
 
 selectedWord = random.choice(words)
+
 
 
 shuffledWord = list(selectedWord)
@@ -13,20 +13,20 @@ random.shuffle(shuffledWord)
 
 shuffledWord = ''.join(shuffledWord)
 
-print(f"the shuffled word is : {shuffledWord}")
+print(f"shuffled word is : {shuffledWord}")
 
-attempts = 4
 
-while attempts >= 0: 
 
-    guess = input("Enter your guess : ")
+attempts = 5
+
+while attempts > 0:
+    attempts -= 1
+    guess = input("Enter your Guess: ")
     if guess == selectedWord:
-        print("Congratulations! You guessed the correct word!")
+        print(f"Congratulations! You guessed the correct word!")
         exit()
     else:
         print(f"Incorrect! Try again. You have {attempts} attempts left.")
-        
-    attempts -= 1
 
 
-print(f" 	Youre out of attempts! The correct word was: {selectedWord}")
+print(f" 	You’re out of attempts! The correct word was: {selectedWord}")
