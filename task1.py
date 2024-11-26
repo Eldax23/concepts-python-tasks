@@ -2,7 +2,7 @@ print("Number of Steps taken each day in a month: ")
 
 i = 0
 list = []
-for i in range(30):
+for i in range(10):
     steps = int(input(f"Day {i + 1} : "))
     list.append(steps)
 
